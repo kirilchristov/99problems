@@ -21,7 +21,11 @@ function calculateBranchSums (node, runningSum, sums) {
 
   if (!node.left && !node.right) {
     sums.push(newRunningSum);
+<<<<<<< HEAD
     return sums;
+=======
+    return;
+>>>>>>> 7a851c9d758c6f60b49934cb19668eb194d2d051
   } 
   calculateBranchSums(node.left, newRunningSum, sums)
   calculateBranchSums(node.right, newRunningSum, sums)
