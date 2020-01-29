@@ -35,4 +35,4 @@ function fib(n) {
   else return lastTwo[1]
 }
 
-console.log(fib(10))
+// console.log(fib(10))
