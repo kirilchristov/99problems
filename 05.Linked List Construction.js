@@ -15,6 +15,7 @@ class DoublyLinkedList {
   }
 
   setHead(node) {
+<<<<<<< HEAD
     if (this.head === null) {
       this.head = node;
       this.tail = node;
@@ -29,6 +30,13 @@ class DoublyLinkedList {
       return
     }
     this.insertAfter(this.tail, node)
+=======
+    
+  }
+
+  setTail(node) {
+    
+>>>>>>> 128bb74aaf935eab77ff1d58ad30c7e40bdc14a6
   }
 
   insertBefore(node, nodeToInsert) {
@@ -49,6 +57,7 @@ class DoublyLinkedList {
   }
 
   insertAfter(node, nodeToInsert) {
+<<<<<<< HEAD
     if (nodeToInsert === this.head && nodeToInsert === this.tail) return;
     this.remove(nodeToInsert);
     nodeToInsert.next = node.next;
@@ -78,6 +87,13 @@ class DoublyLinkedList {
     } else {
       this.setTail(nodeToInsert)
     }
+=======
+    
+  }
+
+  insertAtPosition(position, nodeToInsert) {
+    
+>>>>>>> 128bb74aaf935eab77ff1d58ad30c7e40bdc14a6
   }
 
   removeNodesWithValue(value) {
@@ -97,20 +113,36 @@ class DoublyLinkedList {
     //02 to implement - 0(1) time | 0 (1) space
     //check if it's the only one
     if (node === this.head) {
+<<<<<<< HEAD
       this.head = this.head.next
     }
     if (node === this.tail) {
       this.tail = this.tail.prev
     }
     this.removeBindings(node)
+=======
+      head = this.head.next
+    }
+    if (node === this.tail) {
+      tail = this.tail.prev
+    }
+    this.removeBindings(node)
+    
+>>>>>>> 128bb74aaf935eab77ff1d58ad30c7e40bdc14a6
   }
 
   removeBindings(node){
     //we are fixiing the prev and next pointers and nulling the node
     if (node.prev !== null) node.prev.next = node.next;
     if (node.next !== null) node.next.prev = node.prev;
+<<<<<<< HEAD
     node.prev = null;
     node.next = null;
+=======
+    node.next = null;
+    node.prev = null;
+   
+>>>>>>> 128bb74aaf935eab77ff1d58ad30c7e40bdc14a6
   }
 
   containsNodeWithValue(value) {
@@ -124,6 +156,7 @@ class DoublyLinkedList {
   }
 }
 
+<<<<<<< HEAD
 
 const kiroList = new DoublyLinkedList();
 
@@ -134,3 +167,9 @@ kiroList.insertAfter(first, second)
 
 console.log(kiroList)
 
+=======
+const kiroList = new DoublyLinkedList;
+kiroList.head = new Node(8)
+// console.log(kiroList)
+console.log(kiroList.containsNodeWithValue(7))
+>>>>>>> 128bb74aaf935eab77ff1d58ad30c7e40bdc14a6
